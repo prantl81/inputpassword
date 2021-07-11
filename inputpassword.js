@@ -23,29 +23,6 @@
 		<TreeTable
                     id="TreeTableBasic"
                     rows="
-      {"name": "Women", "categories": [
-          {"name":"Clothing", "categories": [
-            {"name": "Dresses", "categories": [
-              {"name": "Casual Red Dress", "amount": 16.99, "currency": "EUR", "size": "S"},
-              {"name": "Short Black Dress", "amount": 47.99, "currency": "EUR", "size": "M"},
-              {"name": "Long Blue Dinner Dress", "amount": 103.99, "currency": "USD", "size": "L"}
-            ]},
-            {"name": "Tops", "categories": [
-              {"name": "Printed Shirt", "amount": 24.99, "currency": "USD", "size": "M"},
-              {"name": "Tank Top", "amount": 14.99, "currency": "USD", "size": "S"}
-            ]},
-            {"name": "Pants", "categories": [
-              {"name": "Red Pant", "amount": 32.99, "currency": "USD", "size": "M"},
-              {"name": "Skinny Jeans", "amount": 44.99, "currency": "USD", "size": "S"},
-              {"name": "Black Jeans", "amount": 99.99, "currency": "USD", "size": "XS"},
-              {"name": "Relaxed Fit Jeans", "amount": 56.99, "currency": "USD", "size": "L"}
-            ]},
-            {"name": "Skirts", "categories": [
-              {"name": "Striped Skirt", "amount": 24.99, "currency": "USD", "size": "M"},
-              {"name": "Black Skirt", "amount": 44.99, "currency": "USD", "size": "S"}
-            ]}
-          ]},
-        ]},
         {"name": "Men", "categories": [
           {"name":"Clothing", "categories": [
             {"name": "Shirts", "categories": [
@@ -67,10 +44,7 @@
             {"name": "Wallet", "amount": 47.99, "currency": "USD"},
             {"name": "Sunglasses", "amount": 199.99, "currency": "USD"}
           ]},
-            ]}
-       }
-		    
-		    , parameters: {arrayNames:['categories']}}"
+            ]}     , parameters: {arrayNames:['categories']}}"
                     selectionMode="MultiToggle"
                     enableSelectAll="false"
                     ariaLabelledBy="title">
