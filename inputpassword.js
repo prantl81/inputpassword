@@ -240,10 +240,15 @@
             sap.ui.define([
                 "jquery.sap.global",
                 "sap/ui/core/mvc/Controller",
+		"sap/ui/model/json/JSONModel"
             ], function(jQuery, Controller) {
                 "use strict";
 
                 return Controller.extend("myView.Template", {
+		    onInit: function() {
+			var oModel = new JSONModel("https://prantl81.github.io/inputpassword/Clothing.json");
+			this.getView().setModel(oModel);
+			},	
                     onButtonPress: function(oEvent) {
                         _password = oView.byId("passwordInput").getValue();
                         that._firePropertiesChanged();
