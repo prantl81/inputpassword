@@ -22,8 +22,7 @@
 					<l:content>
 		<TreeTable
                     id="TreeTableBasic"
-                    rows="{
-		    {
+                    rows="
       "categories": [
         {"name": "Women", "categories": [
           {"name":"Clothing", "categories": [
