@@ -59,8 +59,8 @@
     					{"key": "M", "value": "Medium"},
     					{"key": "L", "value": "Large"}
   					], templateShareable: true}"
-                                    selectedKey="{size}"
-                                    visible="{= !!${size}}"
+                                    selectedKey="{M}"
+                                    visible="{= !!${M}}"
                                     forceSelection="false">
                                 <core:Item key="{key}" text="{value}"/>
                             </m:Select>
