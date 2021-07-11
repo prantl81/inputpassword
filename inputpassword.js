@@ -28,7 +28,7 @@
             {"name": "Tie", "amount": 36.99, "currency": "USD"},
             {"name": "Wallet", "amount": 47.99, "currency": "USD"}
           ]},
-            ]}     , parameters: {arrayNames:['categories']}}"
+            ]     , parameters: {arrayNames:['categories']}}"
                     selectionMode="MultiToggle"
                     enableSelectAll="false"
                     ariaLabelledBy="title">
