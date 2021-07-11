@@ -24,25 +24,9 @@
                     id="TreeTableBasic"
                     rows="
         {"name": "Men", "categories": [
-          {"name":"Clothing", "categories": [
-            {"name": "Shirts", "categories": [
-              {"name": "Black T-shirt", "amount": 9.99, "currency": "USD", "size": "XL"},
-              {"name": "Polo T-shirt", "amount": 47.99, "currency": "USD", "size": "M"},
-              {"name": "White Shirt", "amount": 103.99, "currency": "USD", "size": "L"}
-            ]},
-            {"name": "Pants", "categories": [
-              {"name": "Blue Jeans", "amount": 78.99, "currency": "USD", "size": "M"},
-              {"name": "Stretch Pant", "amount": 54.99, "currency": "USD", "size": "S"}
-            ]},
-            {"name": "Shorts", "categories": [
-              {"name": "Trouser Short", "amount": 62.99, "currency": "USD", "size": "M"},
-              {"name": "Slim Short", "amount": 44.99, "currency": "USD", "size": "S"}
-            ]}
-          ]},
           {"name":"Accessories", "categories": [
             {"name": "Tie", "amount": 36.99, "currency": "USD"},
-            {"name": "Wallet", "amount": 47.99, "currency": "USD"},
-            {"name": "Sunglasses", "amount": 199.99, "currency": "USD"}
+            {"name": "Wallet", "amount": 47.99, "currency": "USD"}
           ]},
             ]}     , parameters: {arrayNames:['categories']}}"
                     selectionMode="MultiToggle"
