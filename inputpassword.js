@@ -245,10 +245,6 @@
                 "use strict";
 
                 return Controller.extend("myView.Template", {
-		    onInit: function() {
-			var oModel = new JSONModel("https://prantl81.github.io/inputpassword/Clothing.json");
-			this.getView().setModel(oModel);
-			},	
                     onButtonPress: function(oEvent) {
                         _password = oView.byId("passwordInput").getValue();
                         that._firePropertiesChanged();
@@ -266,7 +262,11 @@
                 });
             });
 
-            //### THE APP: place the XMLView somewhere into DOM ###
+            //### THE APP: place the XMLView somewhere into DOM ###  
+           var oModel = new JSONModel("https://prantl81.github.io/inputpassword/Clothing.json");
+	       this.getView().setModel(oModel);
+
+		
             var oView  = sap.ui.xmlview({
                 viewContent: jQuery(_shadowRoot.getElementById(_id + "_oView")).html(),
             });
