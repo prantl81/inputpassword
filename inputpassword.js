@@ -53,7 +53,12 @@
                         <m:Label text="Size"/>
                         <template>
                             <m:Select
-                                    items="{path: '/sizes', templateShareable: true}"
+                                    items="{[
+    					{"key": "XS", "value": "Extra Small"},
+    					{"key": "S", "value": "Small"},
+    					{"key": "M", "value": "Medium"},
+    					{"key": "L", "value": "Large"}
+  					], templateShareable: true}"
                                     selectedKey="{size}"
                                     visible="{= !!${size}}"
                                     forceSelection="false">
