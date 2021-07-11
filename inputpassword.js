@@ -22,13 +22,7 @@
 					<l:content>
 		<TreeTable
                     id="TreeTableBasic"
-                    rows="
-        {"name": "Men", "categories": [
-          {"name":"Accessories", "categories": [
-            {"name": "Tie", "amount": 36.99, "currency": "USD"},
-            {"name": "Wallet", "amount": 47.99, "currency": "USD"}
-          ]},
-            ]}"
+                    rows=""
                     selectionMode="MultiToggle"
                     enableSelectAll="false"
                     ariaLabelledBy="title">
