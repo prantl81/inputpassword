@@ -194,6 +194,8 @@
 
             //### Controller ###
             sap.ui.define([
+		"sap.ui.commons",
+		"sap.ui.table",
                 "jquery.sap.global",
                 "sap/ui/core/mvc/Controller",
 		"sap/ui/core/UIComponent"    
