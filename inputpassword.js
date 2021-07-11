@@ -11,31 +11,22 @@
          <slot name="content"></slot>
         </div>
         <script id="oView" name="oView" type="sapui5/xmlview">
-            <mvc:View
-			    controllerName="myView.Template"
-				xmlns:l="sap.ui.layout"
-				xmlns:mvc="sap.ui.core.mvc"
-				xmlns="sap.m">
-				<l:VerticalLayout
-					class="sapUiContentPadding"
-					width="100%">
-					<l:content>
-		 <TreeTable
-                    id="TreeTableBasic"
-                    rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}"
-                    selectionMode="MultiToggle"
-                    enableSelectAll="false"
-                    ariaLabelledBy="title">
-                <extension>
-                    <m:OverflowToolbar style="Clear">
-                        <m:Title id="title" text="Clothing"/>
-                        <m:ToolbarSpacer/>
-                        <m:Button text="Collapse all" press="onCollapseAll"/>
-                        <m:Button text="Collapse selection" press="onCollapseSelection"/>
-                        <m:Button text="Expand first level" press="onExpandFirstLevel"/>
-                        <m:Button text="Expand selection" press="onExpandSelection"/>
-                    </m:OverflowToolbar>
-                </extension>
+            <mvc:View controllerName="myView.Template"
+		             xmlns:l="sap.ui.layout"
+			     xmlns:mvc="sap.ui.core.mvc"
+			     xmlns="sap.m">
+				
+		<l:VerticalLayout
+			class="sapUiContentPadding"
+			width="100%">
+				<l:content>
+		 			<TreeTable 
+					id="TreeTableBasic" 
+                    			rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}"
+                   			selectionMode="MultiToggle"
+                    			enableSelectAll="false"
+                    			ariaLabelledBy="title">
+                
                 <columns>
                     <Column width="13rem">
                         <m:Label text="Categories"/>
