@@ -20,9 +20,9 @@
 					class="sapUiContentPadding"
 					width="100%">
 					<l:content>
-		<TreeTable
+		 <TreeTable
                     id="TreeTableBasic"
-                    rows=""
+                    rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}"
                     selectionMode="MultiToggle"
                     enableSelectAll="false"
                     ariaLabelledBy="title">
@@ -53,14 +53,9 @@
                         <m:Label text="Size"/>
                         <template>
                             <m:Select
-                                    items="{[
-    					{"key": "XS", "value": "Extra Small"},
-    					{"key": "S", "value": "Small"},
-    					{"key": "M", "value": "Medium"},
-    					{"key": "L", "value": "Large"}
-  					], templateShareable: true}"
-                                    selectedKey="{M}"
-      
+                                    items="{path: '/sizes', templateShareable: true}"
+                                    selectedKey="{size}"
+                                    visible="{= !!${size}}"
                                     forceSelection="false">
                                 <core:Item key="{key}" text="{value}"/>
                             </m:Select>
