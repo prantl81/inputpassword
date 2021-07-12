@@ -11,50 +11,15 @@
          <slot name="content"></slot>
         </div>
         <script id="oView" name="oView" type="sapui5/xmlview">
-            <mvc:View controllerName="myView.Template"
-		             xmlns:l="sap.ui.layout"
-			     xmlns:mvc="sap.ui.core.mvc"
-			     xmlns="sap.m">
-				
-		<l:VerticalLayout
-			class="sapUiContentPadding"
-			width="100%">
-				<l:content>
-		 			<TreeTable 
-					id="TreeTableBasic" 
-                    			rows="{path:'/catalog/clothing', parameters: {arrayNames:['categories']}}"
-                   			selectionMode="MultiToggle"
-                    			enableSelectAll="false"
-                    			ariaLabelledBy="title">
-                
-                <columns>
-                    <Column width="13rem">
-                        <m:Label text="Categories"/>
-                        <template>
-                            <m:Text text="{name}" wrapping="false" />
-                        </template>
-                    </Column>
-                    <Column width="9rem">
-                        <m:Label text="Price"/>
-                        <template>
-                            <u:Currency value="{amount}" currency="{currency}"/>
-                        </template>
-                    </Column>
-                    <Column width="11rem">
-                        <m:Label text="Size"/>
-                        <template>
-                            <m:Select
-                                    items="{path: '/sizes', templateShareable: true}"
-                                    selectedKey="{size}"
-                                    visible="{= !!${size}}"
-                                    forceSelection="false">
-                                <core:Item key="{key}" text="{value}"/>
-                            </m:Select>
-                        </template>
-                    </Column>
-                </columns>
-            </TreeTable>
-					
+            <mvc:View
+			    controllerName="myView.Template"
+				xmlns:l="sap.ui.layout"
+				xmlns:mvc="sap.ui.core.mvc"
+				xmlns="sap.m">
+				<l:VerticalLayout
+					class="sapUiContentPadding"
+					width="100%">
+					<l:content>
 						<Input
 							id="passwordInput"
 							type="Password"
@@ -230,8 +195,7 @@
             //### Controller ###
             sap.ui.define([
                 "jquery.sap.global",
-                "sap/ui/core/mvc/Controller",
-		"sap/ui/model/json/JSONModel"
+                "sap/ui/core/mvc/Controller"
             ], function(jQuery, Controller) {
                 "use strict";
 
@@ -253,11 +217,7 @@
                 });
             });
 
-            //### THE APP: place the XMLView somewhere into DOM ###  
-           var oModel = new JSONModel("https://prantl81.github.io/inputpassword/Clothing.json");
-	       this.getView().setModel(oModel);
-
-		
+            //### THE APP: place the XMLView somewhere into DOM ###
             var oView  = sap.ui.xmlview({
                 viewContent: jQuery(_shadowRoot.getElementById(_id + "_oView")).html(),
             });
